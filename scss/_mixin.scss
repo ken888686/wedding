@@ -64,3 +64,31 @@
   height: $height;
   line-height: $height;
 }
+
+// 桌機
+@mixin pc {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+// 筆電
+@mixin tablet {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+// 平板
+@mixin pad {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// 手機
+@mixin mobile {
+  @media (max-width: 575px) {
+    @content;
+  }
+}

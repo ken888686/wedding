@@ -163,6 +163,24 @@ a {
   margin: 0 auto;
 }
 
+@media (max-width: 991px) {
+  .container {
+    max-width: 846px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 705px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    max-width: 517px;
+  }
+}
+
 .active {
   background: #3f5d45;
   color: #eaf0ed;
@@ -184,6 +202,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 30px 0;
+}
+
+@media (max-width: 991px) {
+  .header {
+    margin: 10px 0;
+  }
 }
 
 .header img {
@@ -243,6 +267,12 @@ a {
   margin-bottom: 60px;
 }
 
+@media (max-width: 991px) {
+  .banner {
+    margin-bottom: 30px;
+  }
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,26 +284,30 @@ a {
 
 .content .category {
   width: 300px;
+  font-size: 1.5rem;
+  height: 65px;
+  line-height: 65px;
   margin-right: 20px;
   text-align: center;
-  font-size: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .content .category {
+    width: 210px;
+    font-size: 1.25rem;
+    height: 56px;
+    line-height: 56px;
+  }
 }
 
 .content .category span {
   display: block;
-  height: 65px;
-  line-height: 65px;
   background: #3f5d45;
   color: #eaf0ed;
 }
 
 .content .category li {
   border: 1px solid #eaf0ed;
-}
-
-.content .category a {
-  height: 65px;
-  line-height: 65px;
 }
 
 .content .category a:hover {
@@ -294,13 +328,19 @@ a {
 }
 
 .content .product .product-info {
+  text-align: center;
   width: 300px;
   margin-bottom: 20px;
 }
 
+@media (max-width: 991px) {
+  .content .product .product-info {
+    margin-bottom: 15px;
+  }
+}
+
 .content .product .product-info .product-img {
   position: relative;
-  height: 315px;
 }
 
 .content .product .product-info .product-img span {
@@ -326,7 +366,6 @@ a {
 }
 
 .content .product .product-info .product-description {
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,10 +378,10 @@ a {
 }
 
 .content .product .product-info .product-description li {
-  height: 56px;
-  line-height: 56px;
   border: 1px solid #eaf0ed;
   font-size: 1.25rem;
+  height: 56px;
+  line-height: 56px;
 }
 
 .content .product .product-info .product-description .product-name {
@@ -358,12 +397,17 @@ a {
 }
 
 .content .product .product-info a {
-  text-align: center;
   font-size: 1.75rem;
   height: 65px;
   line-height: 65px;
   background: #eaf0ed;
   color: #3f5d45;
+}
+
+@media (max-width: 991px) {
+  .content .product .product-info a {
+    font-size: 1.5rem;
+  }
 }
 
 .content .product .product-info a:hover {

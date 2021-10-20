@@ -12,6 +12,15 @@ a {
 
 .container {
   max-width: $max-width;
+  @include tablet {
+    max-width: $max-width * 0.9;
+  }
+  @include pad {
+    max-width: $max-width * 0.75;
+  }
+  @include mobile {
+    max-width: $max-width * 0.55;
+  }
   margin: 0 auto;
 }
 
@@ -28,6 +37,9 @@ a {
     justify-content: space-between;
   }
   margin: 30px 0;
+  @include tablet {
+    margin: 10px 0;
+  }
   img {
     height: 40px;
   }
@@ -60,6 +72,9 @@ a {
 
 .banner {
   margin-bottom: 60px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
 }
 
 .content {
@@ -68,22 +83,27 @@ a {
   }
   .category {
     width: $card-width;
+    font-size: $fs-4;
+    @include line-height($column-height-1);
+    @include tablet {
+      width: $card-width * 0.7;
+      font-size: $fs-5;
+      @include line-height($column-height-2);
+    }
     margin-right: 20px;
     text-align: center;
-    font-size: $fs-4;
     span {
       display: block;
-      @include line-height(65px);
       @include bg-dark;
     }
     li {
       @include border-light;
     }
     a {
-      @include line-height(65px);
       @include hover-light;
     }
   }
+
   .product {
     width: $product-width;
     @include flex {
@@ -91,11 +111,14 @@ a {
       justify-content: space-between;
     }
     .product-info {
+      text-align: center;
       width: $card-width;
       margin-bottom: 20px;
+      @include tablet {
+        margin-bottom: 15px;
+      }
       .product-img {
         position: relative;
-        height: 315px;
         span {
           position: absolute;
           left: 20px;
@@ -114,14 +137,13 @@ a {
         }
       }
       .product-description {
-        text-align: center;
         @include flex-align-items-center {
           justify-content: space-between;
         }
         li {
-          @include line-height(56px);
           @include border-light;
           font-size: $fs-5;
+          @include line-height($column-height-2);
         }
         .product-name {
           flex-grow: 2;
@@ -131,9 +153,11 @@ a {
         }
       }
       a {
-        text-align: center;
         font-size: $fs-3;
-        @include line-height(65px);
+        @include tablet {
+          font-size: $fs-4;
+        }
+        @include line-height($column-height-1);
         @include bg-light;
         @include hover-dark;
       }
@@ -150,7 +174,6 @@ a {
   font-size: $fs-5;
   li {
     @include border-light;
-
     a {
       @include flex-align-items-center {
         justify-content: center;
@@ -159,7 +182,6 @@ a {
       width: 60px;
       @include hover-light;
     }
-
     .previous {
       @include bg-pic($previous-arrow);
     }
