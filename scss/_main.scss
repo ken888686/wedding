@@ -2,8 +2,7 @@
   @include flex-align-items-center {
     justify-content: space-between;
   }
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0;
   img {
     height: 40px;
   }
@@ -16,9 +15,7 @@
         justify-content: start;
       }
       a {
-        padding-top: 10px;
-        padding-bottom: 8px;
-        padding-right: 60px;
+        padding: 10px 60px 8px 0;
         @include hover-light {
           border-bottom: 5px solid $theme-color;
         }
@@ -40,46 +37,39 @@
   margin-bottom: 60px;
 }
 
-.title {
-  @include bg-dark;
-}
-
 .content {
   @include flex {
     justify-content: space-between;
   }
   .category {
-    width: 300px;
+    width: $card-width;
     margin-right: 20px;
     text-align: center;
     font-size: $fs-4;
-    h4 {
+    span {
       display: block;
-      height: 65px;
-      line-height: 65px;
+      @include line-height(65px);
+      @include bg-dark;
     }
     li {
       @include border-light;
     }
     a {
-      height: 65px;
-      line-height: 65px;
-      text-align: center;
+      @include line-height(65px);
       @include hover-light;
     }
   }
   .product {
+    width: $product-width;
     @include flex {
       flex-wrap: wrap;
       justify-content: space-between;
     }
-    width: 620px;
-    margin-bottom: 20px;
     .product-info {
-      margin-bottom: 10px;
+      width: $card-width;
+      margin-bottom: 20px;
       .product-img {
         position: relative;
-        width: 300px;
         height: 315px;
         span {
           position: absolute;
@@ -93,7 +83,6 @@
           display: contents;
           img {
             position: absolute;
-            height: fit-content;
             top: 19px;
             right: 22px;
           }
@@ -105,8 +94,7 @@
           justify-content: space-between;
         }
         li {
-          height: 56px;
-          line-height: 56px;
+          @include line-height(56px);
           @include border-light;
           font-size: $fs-5;
         }
@@ -119,10 +107,9 @@
       }
       a {
         text-align: center;
-        height: 65px;
-        line-height: 65px;
         font-size: $fs-3;
-        background: $theme-color-light;
+        @include line-height(65px);
+        @include bg-light;
         @include hover-dark;
       }
     }
@@ -133,8 +120,7 @@
   @include flex-align-items-center {
     justify-content: end;
   }
-  margin-top: 10px;
-  margin-bottom: 60px;
+  margin: 10px 0 60px 0;
   text-align: center;
   font-size: $fs-5;
   li {
@@ -150,12 +136,10 @@
     }
 
     .previous {
-      background: url($previous-arrow) no-repeat center center;
-      @include hover-pic-light($previous-arrow);
+      @include bg-pic($previous-arrow);
     }
     .next {
-      background: url($next-arrow) no-repeat center center;
-      @include hover-pic-light($next-arrow);
+      @include bg-pic($next-arrow);
     }
   }
 }

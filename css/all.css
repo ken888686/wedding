@@ -206,8 +206,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 .header img {
@@ -239,9 +238,7 @@ a {
 }
 
 .header .menu ul a {
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 60px;
+  padding: 10px 60px 8px 0;
 }
 
 .header .menu ul a:hover {
@@ -269,11 +266,6 @@ a {
   margin-bottom: 60px;
 }
 
-.title {
-  background: #3f5d45;
-  color: #eaf0ed;
-}
-
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -290,10 +282,12 @@ a {
   font-size: 1.5rem;
 }
 
-.content .category h4 {
+.content .category span {
   display: block;
   height: 65px;
   line-height: 65px;
+  background: #3f5d45;
+  color: #eaf0ed;
 }
 
 .content .category li {
@@ -303,7 +297,6 @@ a {
 .content .category a {
   height: 65px;
   line-height: 65px;
-  text-align: center;
 }
 
 .content .category a:hover {
@@ -312,6 +305,7 @@ a {
 }
 
 .content .product {
+  width: 620px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,17 +314,15 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 620px;
-  margin-bottom: 20px;
 }
 
 .content .product .product-info {
-  margin-bottom: 10px;
+  width: 300px;
+  margin-bottom: 20px;
 }
 
 .content .product .product-info .product-img {
   position: relative;
-  width: 300px;
   height: 315px;
 }
 
@@ -352,9 +344,6 @@ a {
 
 .content .product .product-info .product-img a img {
   position: absolute;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   top: 19px;
   right: 22px;
 }
@@ -393,10 +382,11 @@ a {
 
 .content .product .product-info a {
   text-align: center;
+  font-size: 1.75rem;
   height: 65px;
   line-height: 65px;
-  font-size: 1.75rem;
   background: #eaf0ed;
+  color: #3f5d45;
 }
 
 .content .product .product-info a:hover {
@@ -414,8 +404,7 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  margin-top: 10px;
-  margin-bottom: 60px;
+  margin: 10px 0 60px 0;
   text-align: center;
   font-size: 1.25rem;
 }

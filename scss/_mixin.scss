@@ -9,16 +9,6 @@
   @content;
 }
 
-@mixin bg-light {
-  background: $theme-color-light;
-  color: $theme-color;
-}
-
-@mixin bg-dark {
-  background: $theme-color;
-  color: $theme-color-light;
-}
-
 @mixin hover-light {
   &:hover {
     @include bg-light;
@@ -32,10 +22,6 @@
   }
 }
 
-@mixin border-light {
-  border: 1px solid $theme-color-light;
-}
-
 @mixin hover-pic-light($pic) {
   &:hover {
     background: url($pic), $theme-color-light;
@@ -43,4 +29,28 @@
     background-position: center center;
     background-blend-mode: multiply;
   }
+}
+
+@mixin bg-light {
+  background: $theme-color-light;
+  color: $theme-color;
+}
+
+@mixin bg-dark {
+  background: $theme-color;
+  color: $theme-color-light;
+}
+
+@mixin bg-pic($url) {
+  background: url($url) no-repeat center center;
+  @include hover-pic-light($url);
+}
+
+@mixin border-light {
+  border: 1px solid $theme-color-light;
+}
+
+@mixin line-height($height) {
+  height: $height;
+  line-height: $height;
 }
