@@ -1,0 +1,44 @@
+html {
+  font-size: $fs-base;
+  font-weight: bold;
+  color: $theme-color;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: $theme-color;
+}
+
+.fs-1 {
+  font-size: $fs-1;
+}
+.fs-2 {
+  font-size: $fs-2;
+}
+.fs-3 {
+  font-size: $fs-3;
+}
+.fs-4 {
+  font-size: $fs-4;
+}
+.fs-5 {
+  font-size: $fs-5;
+}
+.fs-6 {
+  font-size: $fs-6;
+}
+
+.active {
+  background-color: $theme-color;
+  color: $theme-color-light;
+}
+
+.hover {
+  background-color: $theme-color-light;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}

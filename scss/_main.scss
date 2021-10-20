@@ -1,0 +1,161 @@
+.header {
+  @include flex-align-items-center {
+    justify-content: space-between;
+  }
+  margin-top: 30px;
+  margin-bottom: 30px;
+  img {
+    height: 40px;
+  }
+  .menu {
+    @include flex-align-items-center {
+      justify-content: space-between;
+    }
+    ul {
+      @include flex-align-items-center {
+        justify-content: start;
+      }
+      a {
+        padding-top: 10px;
+        padding-bottom: 8px;
+        padding-right: 60px;
+        @include hover-light {
+          border-bottom: 5px solid $theme-color;
+        }
+      }
+    }
+    .shopping-cart {
+      margin-left: 19px;
+      @include hover-pic-light(
+        "https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true"
+      );
+    }
+    img {
+      height: 24px;
+    }
+  }
+}
+
+.banner {
+  margin-bottom: 60px;
+}
+
+.title {
+  @include bg-dark;
+}
+
+.content {
+  @include flex {
+    justify-content: space-between;
+  }
+  .category {
+    width: 300px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: $fs-4;
+    h4 {
+      display: block;
+      height: 65px;
+      line-height: 65px;
+    }
+    li {
+      @include border-light;
+    }
+    a {
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+      @include hover-light;
+    }
+  }
+  .product {
+    @include flex {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    width: 620px;
+    margin-bottom: 20px;
+    .product-info {
+      margin-bottom: 10px;
+      .product-img {
+        position: relative;
+        width: 300px;
+        height: 315px;
+        span {
+          position: absolute;
+          left: 20px;
+          padding: 10px;
+          writing-mode: vertical-rl;
+          @include bg-dark;
+          letter-spacing: 5px;
+        }
+        a {
+          display: contents;
+          img {
+            position: absolute;
+            height: fit-content;
+            top: 19px;
+            right: 22px;
+          }
+        }
+      }
+      .product-description {
+        text-align: center;
+        @include flex-align-items-center {
+          justify-content: space-between;
+        }
+        li {
+          height: 56px;
+          line-height: 56px;
+          @include border-light;
+          font-size: $fs-5;
+        }
+        .product-name {
+          flex-grow: 2;
+        }
+        .product-price {
+          flex-grow: 1;
+        }
+      }
+      a {
+        text-align: center;
+        height: 65px;
+        line-height: 65px;
+        font-size: $fs-3;
+        background: $theme-color-light;
+        @include hover-dark;
+      }
+    }
+  }
+}
+
+.pagination {
+  @include flex-align-items-center {
+    justify-content: end;
+  }
+  margin-top: 10px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: $fs-5;
+  li {
+    @include border-light;
+
+    a {
+      @include flex-align-items-center {
+        justify-content: center;
+      }
+      height: 60px;
+      width: 60px;
+      @include hover-light;
+    }
+
+    .previous {
+      background: url($previous-arrow) no-repeat center center;
+      @include hover-pic-light($previous-arrow);
+    }
+    .next {
+      background: url($next-arrow) no-repeat center center;
+      @include hover-pic-light($next-arrow);
+    }
+  }
+}

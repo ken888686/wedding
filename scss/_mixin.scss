@@ -1,0 +1,46 @@
+@mixin flex {
+  display: flex;
+  @content;
+}
+
+@mixin flex-align-items-center {
+  display: flex;
+  align-items: center;
+  @content;
+}
+
+@mixin bg-light {
+  background: $theme-color-light;
+  color: $theme-color;
+}
+
+@mixin bg-dark {
+  background: $theme-color;
+  color: $theme-color-light;
+}
+
+@mixin hover-light {
+  &:hover {
+    @include bg-light;
+    @content;
+  }
+}
+
+@mixin hover-dark {
+  &:hover {
+    @include bg-dark;
+  }
+}
+
+@mixin border-light {
+  border: 1px solid $theme-color-light;
+}
+
+@mixin hover-pic-light($pic) {
+  &:hover {
+    background: url($pic), $theme-color-light;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: multiply;
+  }
+}
