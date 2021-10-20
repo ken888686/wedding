@@ -135,7 +135,7 @@ table {
 
 *,
 *::before,
-*:after {
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -158,42 +158,19 @@ a {
   color: #3f5d45;
 }
 
-.fs-1 {
-  font-size: 2.5rem;
-}
-
-.fs-2 {
-  font-size: 2rem;
-}
-
-.fs-3 {
-  font-size: 1.75rem;
-}
-
-.fs-4 {
-  font-size: 1.5rem;
-}
-
-.fs-5 {
-  font-size: 1.25rem;
-}
-
-.fs-6 {
-  font-size: 1rem;
-}
-
-.active {
-  background-color: #3f5d45;
-  color: #eaf0ed;
-}
-
-.hover {
-  background-color: #eaf0ed;
-}
-
 .container {
   max-width: 940px;
   margin: 0 auto;
+}
+
+.active {
+  background: #3f5d45;
+  color: #eaf0ed;
+}
+
+.selected {
+  background: #eaf0ed;
+  color: #3f5d45;
 }
 
 .header {

@@ -1,3 +1,28 @@
+html {
+  font-size: $fs-base;
+  font-weight: bold;
+  color: $theme-color;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: $theme-color;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.active {
+  @include bg-dark;
+}
+
+.selected {
+  @include bg-light;
+}
+
 .header {
   @include flex-align-items-center {
     justify-content: space-between;

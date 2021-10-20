@@ -50,6 +50,16 @@
   border: 1px solid $theme-color-light;
 }
 
+@mixin active-light {
+  color: $theme-color;
+  background-color: $theme-color-light;
+}
+
+@mixin active-dark {
+  color: $theme-color-light;
+  background-color: $theme-color;
+}
+
 @mixin line-height($height) {
   height: $height;
   line-height: $height;
