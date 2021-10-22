@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Mulish&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -147,56 +149,30 @@ img {
 }
 
 html {
+  font-family: "Mulish", "Noto Sans TC", "PingFang TC", serif;
   font-size: 16px;
   font-weight: bold;
-  color: #3f5d45;
+  color: #1e3240;
 }
 
 a {
   display: block;
   text-decoration: none;
-  color: #3f5d45;
+  color: #1e3240;
+}
+
+a:hover {
+  color: #ffffff;
+  background: #afd4e2;
 }
 
 .container {
-  max-width: 940px;
   margin: 0 auto;
 }
 
-.active {
-  background: #3f5d45;
-  color: #eaf0ed;
-}
-
-.selected {
-  background: #eaf0ed;
-  color: #3f5d45;
-}
-
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 30px 0;
-}
-
-@media (max-width: 991px) {
-  .header {
-    margin: 10px;
-  }
-}
-
-.header img {
-  height: 40px;
-}
-
-.header .menu {
+.navbar {
+  margin: 44px 69px 0 165px;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,198 +184,11 @@ a {
           justify-content: space-between;
 }
 
-.header .menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+.navbar .logo {
+  font-size: 18px;
 }
 
-@media (max-width: 575px) {
-  .header .menu ul {
-    display: none;
-  }
-}
-
-.header .menu ul a {
-  padding: 10px 60px 8px 0;
-}
-
-.header .menu ul a:hover {
-  background: #eaf0ed;
-  color: #3f5d45;
-  border-bottom: 5px solid #3f5d45;
-}
-
-.header .menu .shopping-cart {
-  margin-left: 19px;
-}
-
-.header .menu .shopping-cart:hover {
-  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true"), #eaf0ed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.header .menu img {
-  height: 24px;
-}
-
-.banner {
-  margin-bottom: 60px;
-}
-
-@media (max-width: 991px) {
-  .banner {
-    margin-bottom: 30px;
-  }
-}
-
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .content {
-    padding: 0 10px;
-  }
-}
-
-.content .category {
-  width: 300px;
-  font-size: 1.5rem;
-  height: 65px;
-  line-height: 65px;
-  margin-right: 20px;
-}
-
-@media (max-width: 991px) {
-  .content .category {
-    width: 210px;
-    font-size: 1.25rem;
-    height: 56px;
-    line-height: 56px;
-  }
-}
-
-@media (max-width: 575px) {
-  .content .category {
-    display: none;
-  }
-}
-
-.content .category span {
-  display: block;
-  background: #3f5d45;
-  color: #eaf0ed;
-}
-
-.content .category li {
-  border: 1px solid #eaf0ed;
-}
-
-.content .category a:hover {
-  background: #eaf0ed;
-  color: #3f5d45;
-}
-
-.content .product {
-  width: 620px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (max-width: 991px) {
-  .content .product {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media (max-width: 575px) {
-  .content .product {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.content .product .product-info {
-  width: 300px;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 991px) {
-  .content .product .product-info {
-    width: 255px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 767px) {
-  .content .product .product-info {
-    margin: 0 5px 5px 5px;
-  }
-}
-
-@media (max-width: 575px) {
-  .content .product .product-info {
-    margin-bottom: 10px;
-    width: 100%;
-  }
-}
-
-.content .product .product-info div {
-  position: relative;
-}
-
-@media (max-width: 575px) {
-  .content .product .product-info div .product-img {
-    width: 100%;
-  }
-}
-
-.content .product .product-info div span {
-  position: absolute;
-  left: 20px;
-  padding: 10px;
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-  background: #3f5d45;
-  color: #eaf0ed;
-  letter-spacing: 5px;
-}
-
-.content .product .product-info div a {
-  display: contents;
-}
-
-.content .product .product-info div a img {
-  position: absolute;
-  top: 19px;
-  right: 22px;
-}
-
-.content .product .product-info .product-description {
+.navbar .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,111 +198,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.content .product .product-info .product-description li {
-  border: 1px solid #eaf0ed;
-  font-size: 1.25rem;
-  height: 56px;
-  line-height: 56px;
-}
-
-.content .product .product-info .product-description .product-name {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-}
-
-.content .product .product-info .product-description .product-price {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.content .product .product-info a {
-  font-size: 1.75rem;
-  height: 65px;
-  line-height: 65px;
-  background: #eaf0ed;
-  color: #3f5d45;
-}
-
-@media (max-width: 991px) {
-  .content .product .product-info a {
-    font-size: 1.5rem;
-  }
-}
-
-.content .product .product-info a:hover {
-  background: #3f5d45;
-  color: #eaf0ed;
-}
-
-.pagination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  margin: 10px 0 60px 0;
-  text-align: center;
-  font-size: 1.25rem;
-}
-
-@media (max-width: 991px) {
-  .pagination {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.pagination li {
-  border: 1px solid #eaf0ed;
-}
-
-.pagination li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 60px;
-  width: 60px;
-}
-
-.pagination li a:hover {
-  background: #eaf0ed;
-  color: #3f5d45;
-}
-
-.pagination li .previous {
-  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_left.png?raw=true") no-repeat center center;
-}
-
-.pagination li .previous:hover {
-  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_left.png?raw=true"), #eaf0ed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
-}
-
-.pagination li .next {
-  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_right.png?raw=true") no-repeat center center;
-}
-
-.pagination li .next:hover {
-  background: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_right.png?raw=true"), #eaf0ed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-blend-mode: multiply;
+  width: 446px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=all.css.map */

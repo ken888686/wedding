@@ -1,7 +1,10 @@
-$font-family-base: "PingFang TC";
-$max-width: 940px;
-$theme-color: #3f5d45;
-$theme-color-light: #eaf0ed;
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Mulish&display=swap");
+$font-family-base: "Mulish", "Noto Sans TC", "PingFang TC", serif;
+$theme-color: #afd4e2;
+$theme-color-light: #ffffff;
+$theme-color-dark: #1e3240;
+$theme-color-gray: #bdbdbd;
 $fs-base: 16px;
 $fs-1: 2.5rem;
 $fs-2: 2rem;
@@ -14,11 +17,3 @@ $pc-size: 1199px;
 $tablet-size: 991px;
 $pad-size: 767px;
 $mobile-size: 575px;
-
-$card-width: 300px;
-$product-width: 620px;
-$column-height-1: 65px;
-$column-height-2: 56px;
-
-$previous-arrow: "https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_left.png?raw=true";
-$next-arrow: "https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_right.png?raw=true";

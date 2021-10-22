@@ -1,213 +1,35 @@
 html {
+  font-family: $font-family-base;
   font-size: $fs-base;
   font-weight: bold;
-  color: $theme-color;
+  color: $theme-color-dark;
 }
 
 a {
   display: block;
   text-decoration: none;
-  color: $theme-color;
+  color: $theme-color-dark;
+  @include hover-dark;
 }
 
 .container {
-  max-width: $max-width;
   margin: 0 auto;
 }
 
-.active {
-  @include bg-dark;
-}
-
-.selected {
-  @include bg-light;
-}
-
-.header {
+.navbar {
+  margin: 44px 69px 0 165px;
+  text-transform: uppercase;
   @include flex-align-items-center {
     justify-content: space-between;
   }
-  margin: 30px 0;
-  @include tablet {
-    margin: 10px;
-  }
-  img {
-    height: 40px;
+  .logo {
+    font-size: 18px;
   }
   .menu {
     @include flex-align-items-center {
       justify-content: space-between;
     }
-    ul {
-      @include flex-align-items-center {
-        justify-content: start;
-      }
-      @include mobile {
-        display: none;
-      }
-      a {
-        padding: 10px 60px 8px 0;
-        @include hover-light {
-          border-bottom: 5px solid $theme-color;
-        }
-      }
-    }
-    .shopping-cart {
-      margin-left: 19px;
-      @include hover-pic-light(
-        "https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/shopping_cart.png?raw=true"
-      );
-    }
-    img {
-      height: 24px;
-    }
-  }
-}
-
-.banner {
-  margin-bottom: 60px;
-  @include tablet {
-    margin-bottom: 30px;
-  }
-}
-
-.content {
-  @include flex {
-    justify-content: space-between;
-  }
-  @include tablet {
-    padding: 0 10px;
-  }
-  text-align: center;
-  .category {
-    width: $card-width;
-    font-size: $fs-4;
-    @include line-height($column-height-1);
-    @include tablet {
-      width: $card-width * 0.7;
-      font-size: $fs-5;
-      @include line-height($column-height-2);
-    }
-    @include mobile {
-      display: none;
-    }
-    margin-right: 20px;
-    span {
-      display: block;
-      @include bg-dark;
-    }
-    li {
-      @include border-light;
-    }
-    a {
-      @include hover-light;
-    }
-  }
-
-  .product {
-    width: $product-width;
-    @include flex {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      @include tablet {
-        justify-content: space-around;
-      }
-      @include mobile {
-        justify-content: center;
-      }
-    }
-    .product-info {
-      width: $card-width;
-      margin-bottom: 20px;
-      @include tablet {
-        width: $card-width * 0.85;
-        margin-bottom: 15px;
-      }
-      @include pad {
-        margin: 0 5px 5px 5px;
-      }
-      @include mobile {
-        margin-bottom: 10px;
-        width: 100%;
-      }
-      div {
-        position: relative;
-        .product-img {
-          @include mobile {
-            width: 100%;
-          }
-        }
-        span {
-          position: absolute;
-          left: 20px;
-          padding: 10px;
-          writing-mode: vertical-rl;
-          @include bg-dark;
-          letter-spacing: 5px;
-        }
-        a {
-          display: contents;
-          img {
-            position: absolute;
-            top: 19px;
-            right: 22px;
-          }
-        }
-      }
-      .product-description {
-        @include flex-align-items-center {
-          justify-content: space-between;
-        }
-        li {
-          @include border-light;
-          font-size: $fs-5;
-          @include line-height($column-height-2);
-        }
-        .product-name {
-          flex-grow: 2;
-        }
-        .product-price {
-          flex-grow: 1;
-        }
-      }
-      a {
-        font-size: $fs-3;
-        @include tablet {
-          font-size: $fs-4;
-        }
-        @include line-height($column-height-1);
-        @include bg-light;
-        @include hover-dark;
-      }
-    }
-  }
-}
-
-.pagination {
-  @include flex-align-items-center {
-    justify-content: end;
-    @include tablet {
-      justify-content: center;
-    }
-  }
-  margin: 10px 0 60px 0;
-  text-align: center;
-  font-size: $fs-5;
-  li {
-    @include border-light;
-    a {
-      @include flex-align-items-center {
-        justify-content: center;
-      }
-      height: 60px;
-      width: 60px;
-      @include hover-light;
-    }
-    .previous {
-      @include bg-pic($previous-arrow);
-    }
-    .next {
-      @include bg-pic($next-arrow);
-    }
+    width: 446px;
+    font-size: 14px;
   }
 }

@@ -22,28 +22,14 @@
   }
 }
 
-@mixin hover-pic-light($pic) {
-  &:hover {
-    background: url($pic), $theme-color-light;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-blend-mode: multiply;
-  }
-}
-
 @mixin bg-light {
-  background: $theme-color-light;
   color: $theme-color;
+  background: $theme-color-light;
 }
 
 @mixin bg-dark {
-  background: $theme-color;
   color: $theme-color-light;
-}
-
-@mixin bg-pic($url) {
-  background: url($url) no-repeat center center;
-  @include hover-pic-light($url);
+  background: $theme-color;
 }
 
 @mixin border-light {
