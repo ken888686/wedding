@@ -1,35 +1,18 @@
-html {
+// Hexschool 推薦加入
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+body {
   font-family: $font-family-base;
-  font-size: $fs-base;
   font-weight: bold;
   color: $theme-color-dark;
-}
-
-a {
-  display: block;
-  text-decoration: none;
-  color: $theme-color-dark;
-  @include hover-dark;
-}
-
-.container {
-  margin: 0 auto;
-}
-
-.navbar {
-  margin: 44px 69px 0 165px;
-  text-transform: uppercase;
-  @include flex-align-items-center {
-    justify-content: space-between;
-  }
-  .logo {
-    font-size: 18px;
-  }
-  .menu {
-    @include flex-align-items-center {
-      justify-content: space-between;
-    }
-    width: 446px;
-    font-size: 14px;
-  }
 }
