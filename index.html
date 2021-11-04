@@ -1,153 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-tw">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="css/all.css" />
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      :root {
+        --bs-font-sans-serif: system-ui, -apple-system, "Microsoft JhengHei",
+          微軟正黑體, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+          "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol", "Noto Color Emoji";
+      }
+
+      .bg-cover {
+        background-position: center center;
+        background-size: cover;
+      }
+    </style>
   </head>
   <body>
-    <div id="app">
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="/">
-            <img
-              src="https://fakeimg.pl/100x100"
-              alt="logo"
-              width="50"
-              height="50"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">Portfolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/">About Me</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div
-        id="carousel"
-        class="carousel carousel-dark slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            v-for="(item, index) in news"
-            type="button"
-            data-bs-target="#carousel"
-            :data-bs-slide-to="parseInt(index)"
-            :aria-label="item.title"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item" v-for="(item, index) in news">
-            <img
-              :src="item.urlToImage"
-              class="d-block w-100"
-              :alt="item.title"
-              :data-index="index"
-            />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    <div class="container">
+      <header class="py-3 text-center border-bottom">
+        <a href="#" class="h2 text-decoration-none link-dark">Aaron's Blog</a>
+      </header>
+      <div class="overflow-auto pt-3">
+        <nav class="nav justify-content-between flex-nowrap text-nowrap">
+          <a href="#" class="nav-link link-secondary">HTML</a>
+          <a href="#" class="nav-link link-secondary">CSS</a>
+          <a href="#" class="nav-link link-secondary">JavaScript</a>
+          <a href="#" class="nav-link link-secondary">中文</a>
+        </nav>
       </div>
-      <div class="container-fluid px-5 py-3">
-        <div class="row">
-          <div class="list-group col-2 col-md-2">
-            <a
-              href="#"
-              class="list-group-item list-group-item-action active"
-              aria-current="true"
-            >
-              Top 10 News
-            </a>
-            <a href="#" class="list-group-item list-group-item-action"
-              >Technology</a
-            >
-            <a href="#" class="list-group-item list-group-item-action"
-              >Politics</a
-            >
-          </div>
-          <div class="container col">
-            <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2">
-              <div class="col mb-3" v-for="(item, index) in news">
-                <div class="card">
-                  <img
-                    :src="item.urlToImage"
-                    class="card-img-top"
-                    :alt="item.title"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">{{item.title}}</h5>
-                    <p class="card-text">{{item.description}}</p>
-                    <a
-                      :href="item.url"
-                      target="_blank"
-                      class="btn btn-primary stretched-link"
-                      >More...</a
-                    >
-                  </div>
-                </div>
+
+      <!-- 若只需要出現一次使用 background-image 即可 -->
+      <div
+        style="
+          background-image: url(https://images.unsplash.com/photo-1565733293285-77aa342b22dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80);
+        "
+        class="p-4 p-md-5 mb-4 text-white rounded-3 bg-cover"
+      >
+        <div class="col-md-6">
+          <h1 class="display-4 fst-italic">Lorem ipsum dolor sit amet.</h1>
+          <p class="lead my-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            tenetur numquam magni quas. Nihil, quibusdam.
+          </p>
+          <p class="lead mb-0">
+            <a href="#" class="text-white">More</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-lg-2 mb-5">
+        <div class="col">
+          <div class="card row g-0 h-100 flex-row">
+            <div class="col">
+              <div class="p-4 d-flex flex-column h-100">
+                <strong class="text-primary">藝術</strong>
+                <h3 class="my-2">Lorem, ipsum dolor.</h3>
+                <div class="text-muted">2021/01/01</div>
+                <p class="card-text mb-auto">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+                  sunt?
+                </p>
+                <a href="#" class="stretched-link">More</a>
               </div>
+            </div>
+            <div
+              class="col-4 d-none d-lg-block bg-cover"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1562059392-096320bccc7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80);
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card row g-0 h-100 flex-row">
+            <div class="col">
+              <div class="p-4 d-flex flex-column h-100">
+                <strong class="text-primary">藝術</strong>
+                <h3 class="my-2">Lorem, ipsum dolor.</h3>
+                <div class="text-muted">2021/01/01</div>
+                <p class="card-text mb-auto">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                  cum architecto totam sed eius dolor dolorum autem quidem minus
+                  dolore.
+                </p>
+                <a href="#" class="stretched-link">More</a>
+              </div>
+            </div>
+            <div
+              class="col-4 d-none d-lg-block bg-cover"
+              style="
+                background-image: url(https://images.unsplash.com/photo-1547005327-ef75a6961556?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=573&q=80);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-md-5">
+        <div class="col-md-8">
+          <article>
+            <h2>Lorem</h2>
+            <p>2022 Feb. <a href="#">Aaron</a></p>
+            <h1>政院通過電動車免徵牌照稅修法 免徵貨物稅也擬延4年</h1>
+            <figure class="figure">
+              <img
+                class="img-fluid"
+                src="https://img.ltn.com.tw/Upload/business/page/800/2021/11/04/phptIEoxn.jpg"
+              />
+              <figcaption>
+                行政院長蘇貞昌主持院會拍板電動車免徵牌照稅修法。（資料照）
+              </figcaption>
+            </figure>
+
+            <p>
+              〔記者李欣芳／台北報導〕為扶植電動車產業的發展，行政院今天上午召開院會通過財政部提報「使用牌照稅法修正草案」，延長電動汽車、電動機車免徵牌照稅優惠，將再延長4年到2025年12月31日為止，每年估計有1.1萬輛電動車受惠，財政部長蘇建榮進一步表示，財政部也已向行政院提報電動汽車、電動機車免課貨物稅的優惠，擬延長4年同樣到2025年12月31日為止，此案正在行政院審議中。
+            </p>
+            <p>
+              現行「使用牌照稅法」第5條規定，電能機動車輛牌照稅徵收率由直轄市及縣市政府訂定，但電動汽機車可享免徵牌照稅優惠至2021年底，目前全國各縣市均為免稅。
+            </p>
+            <p>
+              為了扶植我國電動車產業，財政部二度延長電動汽車、電動機車免課牌照稅與免課貨物稅優惠，將減稅優惠從2021年的年底展延至2025年的年底。
+            </p>
+            <p>
+              財政部表示，為實現政府綠能科技創新產業願景，鼓勵民眾使用低污染車輛，扶植國內電動車輛相關產業與建構永續發展環境，考量上述免徵期限即將屆至，並配合稅捐稽徵法第20條規定，財政部擬具「使用牌照稅法」第5條、第25條修正草案，延長直轄市及縣市政府得對電動車輛免徵使用牌照稅期限4年，至2025年12月31日止。並且刪除滯納金加徵基準及逾繳納期間30日仍未繳清稅款者移送強制執行的規定，回歸依稅捐稽徵法規定辦理。
+            </p>
+            <p>
+              主持院會的行政院長蘇貞昌表示，此案送請立法院審議後，請財政部及經濟部積極與立法院朝野各黨團溝通協調，早日完成修法程序。
+            </p>
+          </article>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <div class="sticky-top" style="top: 24px">
+            <div class="p-4 bg-light rounded-3">
+              <h4>關於我</h4>
+              <p class="mb-0">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At sed
+                aliquam assumenda quisquam veniam, fugit nobis suscipit deleniti
+                nesciunt odit ea voluptate officia blanditiis rem iure voluptas
+                alias earum eum!
+              </p>
+            </div>
+            <div class="p-4">
+              <h4>封存</h4>
+              <ol class="list-unstyled">
+                <li><a href="#">2021/01</a></li>
+                <li><a href="#">2021/02</a></li>
+                <li><a href="#">2021/03</a></li>
+                <li><a href="#">2021/04</a></li>
+                <li><a href="#">2021/05</a></li>
+              </ol>
+            </div>
+            <div class="p-4">
+              <h4>追蹤我</h4>
+              <ul class="list-unstyled">
+                <li><a href="#">Github</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <footer class="text-center bg-light border-top py-4 mt-5">
+      <p>Aaron Tu Corp.</p>
+      <p>
+        <a href="#">Back to Top</a>
+      </p>
+    </footer>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
   </body>
 </html>
