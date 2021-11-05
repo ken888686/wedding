@@ -7,14 +7,53 @@
     <title>Aaron's Blog</title>
 
     <link rel="stylesheet" href="css/all.css" />
+
+    <style>
+      .bg-cover {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+      .bg-attachment-fixed {
+        background-attachment: fixed;
+      }
+
+      .deco-box {
+        height: 240px;
+        width: 240px;
+        background-color: var(--bs-secondary);
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <img
-        src="https://images.unsplash.com/photo-1612282131240-6e878907d0f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80"
-        alt=""
-      />
-      <a href="#" class="btn btn-primary">按鈕</a>
-    </div>
+    <header class="min-vh-100 position-relative">
+      <div class="deco-box position-absolute top-0 start-0"></div>
+      <div class="deco-box position-absolute bottom-0 end-0"></div>
+      <div
+        class="bg-dark position-absolute bg-cover bg-attachment-fixed"
+        style="
+          top: 30px;
+          right: 30px;
+          bottom: 30px;
+          left: 30px;
+          background-image: url(https://images.unsplash.com/photo-1612282130134-49784d98ac61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=918&q=80);
+        "
+      ></div>
+      <div
+        class="
+          position-absolute
+          top-50
+          start-50
+          translate-middle
+          text-center text-white
+        "
+      >
+        <h1 class="display-1 fw-bold">Aaron Tu</h1>
+        <hr class="mb-1 mx-n3" />
+        <h2>Yungchun Tu</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </header>
   </body>
 </html>
