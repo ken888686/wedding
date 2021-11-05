@@ -725,7 +725,7 @@ $utilities: map-merge(
         ),
       ),
     // scss-docs-end utils-visibility
-    // custom
+    // custom start
     "bg-attachment":
       (
         property: background-attachment,
@@ -754,6 +754,7 @@ $utilities: map-merge(
         center: center center,
       ),
     )
+    // custom end
   ),
   $utilities
 );
