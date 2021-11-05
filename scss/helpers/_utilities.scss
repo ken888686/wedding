@@ -725,16 +725,27 @@ $utilities: map-merge(
         ),
       ),
     // scss-docs-end utils-visibility
-    "background-size":
+    // custom
+    "bg-attachment":
       (
-        property: background-size,
-        class: bg-s,
-        values: (
-          cover: cover,
-          contain: contain,
-          50: 50%,
-        ),
+        property: background-attachment,
+        class: bg-attachment,
+        values: fixed,
       ),
+    "object-fit": (
+      property: object-fit,
+      class: object-fit,
+      values: cover,
+    ),
+    "background-size": (
+      property: background-size,
+      class: bg-s,
+      values: (
+        cover: cover,
+        contain: contain,
+        50: 50%,
+      ),
+    ),
     "background-position": (
       property: background-position,
       responsive: true,
