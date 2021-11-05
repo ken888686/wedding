@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ken888686/ken888686.github.io.git"
+  },
+  "author": "Aaron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ken888686/ken888686.github.io/issues"
+  },
+  "homepage": "https://github.com/ken888686/ken888686.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
