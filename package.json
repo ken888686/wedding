@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ken888686/ken888686.github.io#readme",
   "dependencies": {
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.0"
   }
 }

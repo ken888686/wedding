@@ -4,174 +4,102 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>台灣旅遊景點導覽(by Jessen)</title>
+    <title>台灣旅遊景點導覽(by Shiaohan)</title>
 
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
-    <header class="min-vh-100 position-relative">
-      <div
-        class="bg-dark position-absolute bg-cover"
-        style="
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background-image: url(img/banner.png);
-        "
-      ></div>
-      <div
-        class="
-          d-flex
-          flex-column
-          justify-content-center
-          align-items-center
-          h-100
-          w-100
-          position-absolute
-          top-50
-          start-50
-          translate-middle
-          text-center text-white
-          bg-dark-gradient
-        "
-      >
-        <h1 class="display-6 fw-bold mb-0">尋找台灣</h1>
-        <h2 class="h3 fw-bold mt-4 mb-5">景點、美食、活動</h2>
-        <div class="col-7">
-          <form class="needs-validation" novalidate>
-            <div class="row justify-content-between gx-2">
-              <div class="col position-relative">
-                <input
-                  type="text"
-                  class="form-control form-control-lg"
-                  placeholder="請輸入關鍵字"
-                />
-                <i
-                  class="
-                    bi bi-search
-                    position-absolute
-                    text-secondary
-                    translate-middle
-                    top-50
-                    end-0
-                    fs-4
-                  "
-                ></i>
-              </div>
-              <div class="col-auto">
-                <button
-                  type="button"
-                  class="btn btn-lg btn-primary rounded-3"
-                  data-bs-toggle="modal"
-                  data-bs-target="#filterModal"
-                >
-                  <i class="bi bi-sliders"></i> 篩選
-                </button>
-              </div>
-            </div>
-            <button
-              type="submit"
-              class="btn btn-lg btn-primary rounded-pill mt-5 py-3 px-5"
-            >
-              搜尋
-            </button>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand pt-0" href="/">
+          <img src="img/Logo.svg" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <form class="position-relative me-auto">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="想要去哪？"
+              aria-label="Search"
+            />
+            <a href="#" class="position-absolute top-50 end-0 translate-middle">
+              <img src="img/search.svg" alt="search" />
+            </a>
           </form>
+          <ul class="navbar-nav row gx-5 text-nowrap">
+            <li class="nav-item col">
+              <button
+                class="
+                  nav-link
+                  btn btn-outline-primary
+                  d-flex
+                  align-items-center
+                "
+                href="/"
+              >
+                找景點
+                <img class="ps-1" src="img/tour.svg" alt="找景點" />
+              </button>
+            </li>
+            <li class="nav-item col">
+              <a
+                class="
+                  nav-link
+                  btn btn-outline-primary
+                  d-flex
+                  align-items-center
+                "
+                href="/"
+              >
+                找餐廳
+                <img class="ps-1" src="img/food.svg" alt="找餐廳" />
+              </a>
+            </li>
+            <li class="nav-item col">
+              <a
+                class="
+                  nav-link
+                  btn btn-outline-primary
+                  d-flex
+                  align-items-center
+                "
+                href="/"
+              >
+                找飯店
+                <img class="ps-1" src="img/bed.svg" alt="找飯店" />
+              </a>
+            </li>
+            <li class="nav-item col">
+              <a
+                class="nav-link active btn btn-outline-primary"
+                aria-current="page"
+                href="/"
+              >
+                我的旅程
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <a class="position-absolute mt-4 ms-5" href="#">
-        <img src="img/Logo.png" alt="Logo" />
-      </a>
-
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="filterModal"
-        tabindex="-1"
-        aria-labelledby="filterModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <form>
-              <div class="modal-header">
-                <div class="container">
-                  <h5 class="modal-title col col-md-6" id="filterModalLabel">
-                    <div>
-                      <label for="categorySelect" class="form-label">
-                        分類
-                      </label>
-                      <select id="categorySelect" class="form-select shadow-sm">
-                        <option>分類</option>
-                      </select>
-                    </div>
-                  </h5>
-                </div>
-              </div>
-
-              <div class="modal-body">
-                <div class="container">
-                  <div class="row mb-3">
-                    <div class="col-12 col-md-6">
-                      <label for="northSelect" class="form-label">
-                        北部地區
-                      </label>
-                      <select id="northSelect" class="form-select">
-                        <option>選擇縣市</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label for="northSelect" class="form-label">
-                        中部地區
-                      </label>
-                      <select id="northSelect" class="form-select">
-                        <option>選擇縣市</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label for="northSelect" class="form-label">
-                        南部地區
-                      </label>
-                      <select id="northSelect" class="form-select">
-                        <option>選擇縣市</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label for="northSelect" class="form-label">
-                        東部地區
-                      </label>
-                      <select id="northSelect" class="form-select">
-                        <option>選擇縣市</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label for="northSelect" class="form-label">
-                        離島地區
-                      </label>
-                      <select id="northSelect" class="form-select">
-                        <option>選擇縣市</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    <button
-                      type="submit"
-                      class="btn btn-primary rounded-3 col-5"
-                    >
-                      搜尋
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </header>
+    </nav>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
