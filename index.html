@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="icon" href="favicon.svg" type="image/x-icon" />
-    <!-- https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80 -->
   </head>
   <body>
     <div
@@ -24,6 +23,9 @@
         min-vw-100 min-vh-100
         overflow-hidden
       "
+      style="
+        background-image: url(https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80);
+      "
     >
       <div class="filter"></div>
       <div class="dot"></div>
@@ -32,8 +34,8 @@
       <img src="img/tw.svg" alt="tw" class="title-tw" />
 
       <div class="search col-12 col-md-3 col-lg-2 text-white text-center">
-        <form>
-          <legend class="text-nowrap">訂製你的專屬旅程</legend>
+        <form action="/detail.html" method="get">
+          <legend class="text-nowrap fw-bold">訂製你的專屬旅程</legend>
           <div class="custom-select mb-2 d-grid">
             <select class="custom-round fw-bold" name="location">
               <option value="all" selected>所有區域</option>
@@ -81,10 +83,12 @@
           </div>
           <div class="mb-2">
             <input
+              name="keyword"
               type="text"
               class="form-control custom-round fw-bold"
               id="searchInput"
-              placeholder="輸入關鍵字.."
+              aria-placeholder="輸入關鍵字..."
+              placeholder="輸入關鍵字..."
             />
           </div>
           <button
