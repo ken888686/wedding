@@ -11,70 +11,93 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="css/all.css" />
+    <link rel="icon" href="favicon.svg" type="image/x-icon" />
+    <!-- https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80 -->
   </head>
   <body>
     <div
-      class="min-vh-100 bg-cover overflow-hidden"
-      style="
-        background-image: url(https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80);
+      class="
+        background
+        position-absolute
+        top-0
+        start-0
+        min-vw-100 min-vh-100
+        overflow-hidden
       "
     >
-      <h1 class="h1">Hello</h1>
-      <!-- 
-      <div class="container-fluid align-content-stretch">
-        <div class="dot position-absolute top-50 translate-middle"></div>
-        <img
-          class="position-absolute top-50 start-50 translate-middle"
-          src="img/Saly-1.png"
-          alt="Saly"
-        />
-        <div class="row min-vh-100">
-          <div
-            class="
-              col-12 col-lg-6
-              d-flex
-              flex-column
-              align-items-center
-              justify-content-around
-            "
-          >
-            <div class="col-6">
-              <img src="img/LET'S GO.svg" alt="LET'S GO" />
-            </div>
-            <div class="col-6">
-              <img src="img/tw.svg" alt="tw" />
-            </div>
+      <div class="filter"></div>
+      <div class="dot"></div>
+      <img src="img/Saly-1.png" alt="Saly" class="saly" />
+      <img src="img/LET'S GO.svg" alt="LET'S GO" class="title-en" />
+      <img src="img/tw.svg" alt="tw" class="title-tw" />
+
+      <div class="search col-12 col-md-3 col-lg-2 text-white text-center">
+        <form>
+          <legend class="text-nowrap">訂製你的專屬旅程</legend>
+          <div class="custom-select mb-2 d-grid">
+            <select class="custom-round fw-bold" name="location">
+              <option value="all" selected>所有區域</option>
+              <option value="KLU">基隆市</option>
+              <option value="TPH">新北市</option>
+              <option value="TPE">臺北市</option>
+              <option value="TYC">桃園市</option>
+              <option value="HSH">新竹縣</option>
+              <option value="HSC">新竹市</option>
+              <option value="MAC">苗栗市</option>
+              <option value="MAL">苗栗縣</option>
+              <option value="TXG">臺中市</option>
+              <option value="CWH">彰化縣</option>
+              <option value="CWS">彰化市</option>
+              <option value="NTC">南投市</option>
+              <option value="NTO">南投縣</option>
+              <option value="YLH">雲林縣</option>
+              <option value="CHY">嘉義縣</option>
+              <option value="CYI">嘉義市</option>
+              <option value="TNN">臺南市</option>
+              <option value="KHH">高雄市</option>
+              <option value="IUH">屏東縣</option>
+              <option value="PTS">屏東市</option>
+              <option value="ILN">宜蘭縣</option>
+              <option value="ILC">宜蘭市</option>
+              <option value="HWA">花蓮縣</option>
+              <option value="HWC">花蓮市</option>
+              <option value="TTC">臺東市</option>
+              <option value="TTT">臺東縣</option>
+              <option value="PEH">澎湖縣</option>
+              <option value="GNI">綠島</option>
+              <option value="KYD">蘭嶼</option>
+              <option value="KMN">金門縣</option>
+              <option value="MZW">馬祖</option>
+              <option value="LNN">連江縣</option>
+            </select>
           </div>
-          <div
-            class="
-              col-12 col-lg-6
-              d-flex
-              flex-column
-              align-items-center
-              justify-content-center
-            "
-          >
-            <form>
-              <legend class="text-white h2">訂製你的專屬旅程</legend>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="searchInput"
-                  aria-describedby="searchHelp"
-                  placeholder="輸入關鍵字.."
-                  aria-placeholder="輸入關鍵字.."
-                />
-              </div>
-              <div class="d-grid">
-                <button type="submit" class="btn btn-primary text-white d-grid">
-                  Submit
-                </button>
-              </div>
-            </form>
+          <div class="custom-select mb-2 d-grid">
+            <select class="custom-round fw-bold" name="tour">
+              <option value="all" selected>所有項目</option>
+              <option value="food">美食</option>
+              <option value="hotel">住宿</option>
+              <option value="spot">景點</option>
+            </select>
           </div>
-        </div>
-      </div>-->
+          <div class="mb-2">
+            <input
+              type="text"
+              class="form-control custom-round fw-bold"
+              id="searchInput"
+              placeholder="輸入關鍵字.."
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary w-100 custom-round text-white"
+          >
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="img/search.svg" alt="search" class="me-2" />
+              <span class="fs-5 fw-bold">搜尋</span>
+            </div>
+          </button>
+        </form>
+      </div>
     </div>
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
