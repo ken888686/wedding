@@ -67,12 +67,12 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary: rgba(0, 187, 240, 1) !default; //$blue !default;
-$secondary: rgba(0, 187, 240, 1) !default; //$gray-600 !default;
-$success: rgba(0, 186, 136, 1) !default;
+$primary: #00bbf0 !default; //$blue !default;
+$secondary: #fdb44b !default; //$gray-600 !default;
+$success: #00ba88 !default;
 $info: $cyan !default;
 $warning: $yellow !default;
-$danger: rgba(235, 87, 87, 1) !default;
+$danger: #eb5757 !default;
 $light: rgba(224, 218, 72, 1) !default; //$gray-100 !default;
 $dark: $gray-900 !default;
 // scss-docs-end theme-color-variables
