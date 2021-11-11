@@ -67,19 +67,18 @@ $colors: (
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary: #2f798c !default;
-$secondary: #333333 !default;
-$success: #00ff89 !default;
+$primary: #769763 !default; // $blue !default;
+$secondary: #f1d675 !default; // $gray-600 !default;
+$success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: #fefefe !default;
-$dark: $gray-900 !default;
+$light: #c4c4c4 !default; // $gray-100 !default;
+$dark: #737373 !default; // $gray-900 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  // "hex": #69f0ae,
   "primary": $primary,
   "secondary": $secondary,
   "success": $success,
@@ -87,7 +86,7 @@ $theme-colors: (
   "warning": $warning,
   "danger": $danger,
   "light": $light,
-  "dark": $dark
+  "dark": $dark,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -1029,7 +1028,7 @@ $form-feedback-margin-top: $form-text-margin-top !default;
 $form-feedback-font-size: $form-text-font-size !default;
 $form-feedback-font-style: $form-text-font-style !default;
 $form-feedback-valid-color: $success !default;
-$form-feedback-invalid-color: #ff9a00; //$danger !default;
+$form-feedback-invalid-color: $danger !default;
 
 $form-feedback-icon-valid-color: $form-feedback-valid-color !default;
 $form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
