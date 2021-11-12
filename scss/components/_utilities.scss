@@ -12,6 +12,10 @@
   text-transform: uppercase;
 }
 
+.sub-text {
+  font-size: 10px;
+}
+
 .hover-spot {
   position: relative;
 
@@ -26,4 +30,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.nav-item {
+  .hover-menu {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  &:hover .hover-menu {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.line {
+  width: 1px;
+  background: var(--bs-light);
 }
