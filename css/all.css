@@ -12746,4 +12746,21 @@ fieldset:disabled .btn {
 .uppercase {
   text-transform: uppercase;
 }
+
+.hover-spot {
+  position: relative;
+}
+
+.hover-spot:hover::before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: var(--bs-secondary);
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 /*# sourceMappingURL=all.css.map */

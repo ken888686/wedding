@@ -11,3 +11,19 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+.hover-spot {
+  position: relative;
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: var(--bs-secondary);
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
