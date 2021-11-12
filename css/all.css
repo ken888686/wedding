@@ -13051,4 +13051,85 @@ fieldset:disabled .btn {
 .carousel-dark .carousel-caption {
   color: #000;
 }
+
+.btn-custom-hex {
+  color: #000;
+  background-color: #69f0ae;
+  border-color: #69f0ae;
+}
+
+.btn-custom-hex:hover {
+  color: #000;
+  background-color: #80f2ba;
+  border-color: #78f2b6;
+}
+
+.btn-check:focus + .btn-custom-hex, .btn-custom-hex:focus {
+  color: #000;
+  background-color: #80f2ba;
+  border-color: #78f2b6;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(89, 204, 148, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(89, 204, 148, 0.5);
+}
+
+.btn-check:checked + .btn-custom-hex,
+.btn-check:active + .btn-custom-hex, .btn-custom-hex:active, .btn-custom-hex.active,
+.show > .btn-custom-hex.dropdown-toggle {
+  color: #000;
+  background-color: #87f3be;
+  border-color: #78f2b6;
+}
+
+.btn-check:checked + .btn-custom-hex:focus,
+.btn-check:active + .btn-custom-hex:focus, .btn-custom-hex:active:focus, .btn-custom-hex.active:focus,
+.show > .btn-custom-hex.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(89, 204, 148, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(89, 204, 148, 0.5);
+}
+
+.btn-custom-hex:disabled, .btn-custom-hex.disabled {
+  color: #000;
+  background-color: #69f0ae;
+  border-color: #69f0ae;
+}
+
+.btn-outline-hex {
+  color: #69f0ae;
+  border-color: #69f0ae;
+}
+
+.btn-outline-hex:hover {
+  color: #000;
+  background-color: #69f0ae;
+  border-color: #69f0ae;
+}
+
+.btn-check:focus + .btn-outline-hex, .btn-outline-hex:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(105, 240, 174, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(105, 240, 174, 0.5);
+}
+
+.btn-check:checked + .btn-outline-hex,
+.btn-check:active + .btn-outline-hex, .btn-outline-hex:active, .btn-outline-hex.active, .btn-outline-hex.dropdown-toggle.show {
+  color: #000;
+  background-color: #69f0ae;
+  border-color: #69f0ae;
+}
+
+.btn-check:checked + .btn-outline-hex:focus,
+.btn-check:active + .btn-outline-hex:focus, .btn-outline-hex:active:focus, .btn-outline-hex.active:focus, .btn-outline-hex.dropdown-toggle.show:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(105, 240, 174, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(105, 240, 174, 0.5);
+}
+
+.btn-outline-hex:disabled, .btn-outline-hex.disabled {
+  color: #69f0ae;
+  background-color: transparent;
+}
+
+.btn-search {
+  border-radius: 50px;
+  font-size: 14px;
+  height: 27px;
+}
 /*# sourceMappingURL=all.css.map */
