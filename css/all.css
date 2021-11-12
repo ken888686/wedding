@@ -12755,6 +12755,13 @@ fieldset:disabled .btn {
   font-size: 10px;
 }
 
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: var(--bs-secondary);
+  border-radius: 50%;
+}
+
 .hover-spot {
   position: relative;
 }
@@ -12801,6 +12808,48 @@ fieldset:disabled .btn {
           transform: translate(-50%, -50%);
   border-radius: 5px;
   padding: 8px 16px;
+}
+
+.participate {
+  padding-top: 144px;
+  padding-bottom: 144px;
+  background-color: #fafafa;
+}
+
+.hover-list-group {
+  display: inline-block;
+}
+
+.hover-list-group li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid var(--bs-light);
+}
+
+.hover-list-group li::marker {
+  color: var(--bs-secondary);
+}
+
+.hover-list-group li:nth-child(4) {
+  border: 0px;
+}
+
+.hover-list-group li:hover {
+  color: var(--bs-primary);
+}
+
+.hover-list-group li .dot {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+.hover-list-group li span {
+  padding: 16px 8px;
+  font-size: 18px;
 }
 
 .carousel {
