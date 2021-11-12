@@ -41,13 +41,13 @@
 
 .nav-item {
   .hover-menu {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     z-index: 1;
   }
 
   &:hover .hover-menu {
-    visibility: visible;
+    display: block;
     opacity: 1;
     z-index: 2;
   }
