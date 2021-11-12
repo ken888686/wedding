@@ -78,3 +78,59 @@
   outline: none;
   border: none;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.sub-text {
+  font-size: 10px;
+}
+
+.hover-spot {
+  position: relative;
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: var(--bs-secondary);
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.nav-item {
+  .hover-menu {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  &:hover .hover-menu {
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+.line {
+  width: 1px;
+  background: var(--bs-light);
+}
+
+.carousel {
+  position: relative;
+
+  .search {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 8px 16px;
+  }
+}
