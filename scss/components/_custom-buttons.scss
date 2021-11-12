@@ -5,3 +5,9 @@
 .btn-outline-hex {
   @include button-outline-variant(#69f0ae);
 }
+
+.btn-search {
+  border-radius: 50px;
+  font-size: 14px;
+  height: 27px;
+}

@@ -50,3 +50,16 @@
   width: 1px;
   background: var(--bs-light);
 }
+
+.carousel {
+  position: relative;
+
+  .search {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    padding: 8px 16px;
+  }
+}

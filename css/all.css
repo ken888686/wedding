@@ -12793,6 +12793,20 @@ fieldset:disabled .btn {
   position: relative;
 }
 
+.carousel .search {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.carousel {
+  position: relative;
+}
+
 .carousel.pointer-event {
   -ms-touch-action: pan-y;
       touch-action: pan-y;
