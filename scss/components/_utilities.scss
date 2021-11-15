@@ -1,3 +1,8 @@
+.banner {
+  background-image: url(../../img/banner-01.png);
+  height: 500px;
+}
+
 .bg-cover {
   background-size: cover;
   background-position: center center;
@@ -11,7 +16,6 @@
 .uppercase {
   text-transform: uppercase;
 }
-
 
 .dropdown-menu-primary {
   color: white;
