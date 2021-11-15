@@ -12742,11 +12742,6 @@ fieldset:disabled .btn {
   background-repeat: no-repeat;
 }
 
-.bg-dark-gradient {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.4)), to(rgba(53, 53, 53, 0.4)));
-  background-image: linear-gradient(180deg, rgba(53, 53, 53, 0.4), rgba(53, 53, 53, 0.4));
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -12777,18 +12772,6 @@ fieldset:disabled .btn {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.nav-item .hover-menu {
-  display: none;
-  opacity: 0;
-  z-index: 1;
-}
-
-.nav-item:hover .hover-menu {
-  display: block;
-  opacity: 1;
-  z-index: 2;
 }
 
 .line {
@@ -12850,6 +12833,16 @@ fieldset:disabled .btn {
 .hover-list-group li span {
   padding: 16px 8px;
   font-size: 18px;
+}
+
+.hover-menu .sub-menu {
+  z-index: -1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.hover-menu:hover .sub-menu {
+  z-index: 100;
 }
 
 .carousel {

@@ -12,13 +12,12 @@
     />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="icon" href="favicon.svg" type="image/x-icon" />
-    <!-- https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80 -->
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white p-0">
       <div class="container">
-        <a class="navbar-brand me-auto" href="/">
-          <img src="img/logo.svg" alt="logo" style="height: 100px" />
+        <a class="navbar-brand me-auto p-0" href="/">
+          <img src="img/logo.svg" alt="logo" />
         </a>
         <button
           class="navbar-toggler"
@@ -35,27 +34,25 @@
           <ul
             class="navbar-nav uppercase align-items-center w-100 mb-2 mb-lg-0"
           >
-            <li class="nav-item">
-              <div class="hover-spot">
-                <a class="nav-link link-dark" href="#">
-                  <div
-                    class="
-                      d-flex
-                      flex-column
-                      justify-content-center
-                      align-items-center
-                    "
-                  >
-                    <span>找景點</span>
-                    <span class="sub-text">attraction</span>
-                  </div>
-                </a>
-              </div>
+            <li class="nav-item hover-menu">
+              <a class="nav-link link-dark" href="#">
+                <div
+                  class="
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    align-items-center
+                  "
+                >
+                  <span>找景點</span>
+                  <span class="sub-text">attraction</span>
+                </div>
+              </a>
 
               <div
                 class="
+                  sub-menu
                   container
-                  hover-menu
                   bg-white
                   position-absolute
                   top-100
@@ -115,27 +112,24 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item">
-              <div class="hover-spot">
-                <a class="nav-link link-dark" href="#">
-                  <div
-                    class="
-                      d-flex
-                      flex-column
-                      justify-content-center
-                      align-items-center
-                    "
-                  >
-                    <span>找美食</span>
-                    <span class="sub-text">delicacy</span>
-                  </div>
-                </a>
-              </div>
-
+            <li class="nav-item hover-menu">
+              <a class="nav-link link-dark" href="#">
+                <div
+                  class="
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    align-items-center
+                  "
+                >
+                  <span>找美食</span>
+                  <span class="sub-text">delicacy</span>
+                </div>
+              </a>
               <div
                 class="
                   container
-                  hover-menu
+                  sub-menu
                   bg-white
                   position-absolute
                   top-100
@@ -241,27 +235,24 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item">
-              <div class="hover-spot">
-                <a class="nav-link link-dark" href="#">
-                  <div
-                    class="
-                      d-flex
-                      flex-column
-                      justify-content-center
-                      align-items-center
-                    "
-                  >
-                    <span>找活動</span>
-                    <span class="sub-text">Activity</span>
-                  </div>
-                </a>
-              </div>
-
+            <li class="nav-item hover-menu">
+              <a class="nav-link link-dark" href="#">
+                <div
+                  class="
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    align-items-center
+                  "
+                >
+                  <span>找活動</span>
+                  <span class="sub-text">Activity</span>
+                </div>
+              </a>
               <div
                 class="
                   container
-                  hover-menu
+                  sub-menu
                   bg-white
                   position-absolute
                   top-100
@@ -321,24 +312,22 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item me-lg-auto">
-              <div class="hover-spot">
-                <a class="nav-link link-dark" href="#">
-                  <div
-                    class="
-                      d-flex
-                      flex-column
-                      justify-content-center
-                      align-items-center
-                    "
-                  >
-                    <span>探索更多</span>
-                    <span class="sub-text">more</span>
-                  </div>
-                </a>
-              </div>
+            <li class="nav-item hover-menu">
+              <a class="nav-link link-dark" href="#">
+                <div
+                  class="
+                    d-flex
+                    flex-column
+                    justify-content-center
+                    align-items-center
+                  "
+                >
+                  <span>探索更多</span>
+                  <span class="sub-text">more</span>
+                </div>
+              </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ms-auto">
               <a class="nav-link link-dark" href="#">
                 <img src="img/icon/icon-favorite.svg" alt="favorite" />
               </a>
@@ -399,12 +388,38 @@
       </div>
     </div>
 
+    <!-- Explore -->
+    <div class="container-fluid">
+      <div class="">
+        <div class="card border-0">
+          <div class="row g-0">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title display-6 text-primary">Explore</h5>
+                <p class="card-text text-dark display-6">探索台灣每個角落</p>
+                <p class="card-text text-dark">
+                  台灣擁有高山峽谷及四面環海地理特性，因此充滿各種自然景致等待人們發現，而各縣市有其特色文化與在地必嚐美食，無論想要來場山林陶冶身心之旅，抑或體驗歷史人文深度旅行，都能在台灣這片土地上踏尋。
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img
+                src="img/index_explore/explore_01.jpeg"
+                class="img-fluid rounded-start bg-cover"
+                alt="explore_01"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Participate -->
     <div class="container-fluid px-0 participate">
       <div class="card border-0 w-100 bg-transparent">
         <div class="row g-0">
           <div
-            class="col-12 col-lg-7 bg-cover"
+            class="d-none d-lg-block col-lg-7 bg-cover"
             style="
               height: 466px;
               background-image: url(img/index_participate/participate_01.jpeg);
