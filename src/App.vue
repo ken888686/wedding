@@ -4,6 +4,8 @@
 import Header from "./components/Header.vue";
 import Banner from "./components/Banner.vue";
 import Buttons from "./components/Buttons.vue";
+import News from "./components/News.vue";
+import Activities from "./components/Activities.vue";
 import Footer from "./components/Footer.vue";
 </script>
 
@@ -12,6 +14,8 @@ import Footer from "./components/Footer.vue";
   <Banner />
   <div class="container">
     <Buttons />
+    <News />
+    <Activities />
   </div>
   <Footer />
 </template>
