@@ -1,4 +1,19 @@
 <script setup>
+import axios from "axios";
+import { onMounted } from "@vue/runtime-core";
+
+// const url =
+//   "https://ptx.transportdata.tw/MOTC/v2/PTX/Web/News?$filter=NewsCategory%20%20eq%201&$orderby=UpdateTime%20desc&$top=30&$format=JSON";
+
+function getNews() {
+  axios.get("https://www.google.com").then(function (res) {
+    console.log(res.data);
+  });
+}
+
+onMounted(() => {
+  // getNews();
+});
 </script>
 <template>
   <div class="d-flex flex-column border-0 py-5">
