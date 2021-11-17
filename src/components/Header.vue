@@ -4,9 +4,9 @@
 <template>
   <nav class="navbar navbar-expand-lg py-0 sticky-top bg-white shadow-sm">
     <div class="container-fluid">
-      <a class="navbar-brand p-0" href="#">
+      <router-link class="navbar-brand p-0" to="/">
         <img src="img/logo.svg" alt="logo" />
-      </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -45,30 +45,40 @@
               "
               aria-labelledby="newsDropdownMenuLink"
             >
-              <li><a class="dropdown-item" href="#">最新公告</a></li>
+              <li>
+                <router-link class="dropdown-item" to="/news">
+                  最新公告
+                </router-link>
+              </li>
               <li class="dropdown-item"><div class="divider"></div></li>
-              <li><a class="dropdown-item" href="#">活動資訊</a></li>
+              <li>
+                <router-link class="dropdown-item" to="activities">
+                  活動資訊
+                </router-link>
+              </li>
             </ul>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link link-dark px-0" href="#">自行車路線</a>
+            <router-link class="nav-link link-dark px-0" to="bike-map">
+              自行車路線
+            </router-link>
           </li>
           <li class="nav-item mx-2 dropdown">
-            <a
+            <router-link
               class="
                 nav-link
                 link-dark
                 border-bottom border-2 border-primary
                 px-0
               "
-              href="#"
+              to="bike-rent"
               id="bikeRentDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               單車租借
-            </a>
+            </router-link>
             <ul
               class="
                 dropdown-menu dropdown-menu-primary
@@ -78,7 +88,11 @@
               "
               aria-labelledby="bikeRentDropdownMenuLink"
             >
-              <li><a class="dropdown-item" href="#">單車租借</a></li>
+              <li>
+                <router-link class="dropdown-item" to="#">
+                  單車租借
+                </router-link>
+              </li>
             </ul>
           </li>
           <li class="nav-item mx-2">

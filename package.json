@@ -23,7 +23,8 @@
     "bootstrap-icons": "^1.7.0",
     "jssha": "^3.2.0",
     "moment": "^2.29.1",
-    "vue": "^3.2.16"
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
