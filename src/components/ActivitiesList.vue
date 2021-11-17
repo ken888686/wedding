@@ -41,12 +41,11 @@ function getActivities() {
 }
 
 onMounted(() => {
-  getActivities();
+  // getActivities();
 });
 </script>
 <template>
-  <div class="d-flex flex-column border-0 py-5">
-    <h2 class="h2 fw-bold mb-5 text-center">近期活動</h2>
+  <div class="d-flex flex-column border-0">
     <table class="table hover-custom">
       <tbody>
         <tr
@@ -60,13 +59,12 @@ onMounted(() => {
               {{ item.title }}
             </a>
           </td>
-          <td><i class="bi bi-chevron-right"></i></td>
+          <td>
+            <BootstrapIcon icon="chevron-right" />
+          </td>
         </tr>
       </tbody>
     </table>
-    <div class="text-center py-3">
-      <a href="#" class="btn btn-primary">更多活動資訊</a>
-    </div>
   </div>
 </template>
 <style></style>

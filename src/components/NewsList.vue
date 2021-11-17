@@ -40,12 +40,11 @@ function getNews() {
 }
 
 onMounted(() => {
-  getNews();
+  // getNews();
 });
 </script>
 <template>
-  <div class="d-flex flex-column border-0 py-5">
-    <h2 class="h2 fw-bold mb-5 text-center">最新公告</h2>
+  <div class="d-flex flex-column border-0">
     <table class="table hover-custom">
       <tbody>
         <tr class="position-relative align-middle" v-for="news in newsList">
@@ -56,13 +55,12 @@ onMounted(() => {
               {{ news.title }}
             </a>
           </td>
-          <td><i class="bi bi-chevron-right"></i></td>
+          <td>
+            <BootstrapIcon icon="chevron-right" />
+          </td>
         </tr>
       </tbody>
     </table>
-    <div class="text-center py-3">
-      <a href="#" class="btn btn-primary">更多最新公告</a>
-    </div>
   </div>
 </template>
 <style scoped></style>
