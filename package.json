@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "post-build": "sh ./deploy.sh",
     "serve": "vite preview"
   },
   "repository": {
