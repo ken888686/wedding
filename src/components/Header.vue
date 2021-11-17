@@ -5,7 +5,7 @@
   <nav class="navbar navbar-expand-lg py-0 sticky-top bg-white shadow-sm">
     <div class="container-fluid">
       <router-link class="navbar-brand p-0" to="/">
-        <img src="../static/img/logo.svg" alt="logo" />
+        <img src="src/static/img/logo.svg" alt="logo" />
       </router-link>
       <button
         class="navbar-toggler"
@@ -16,7 +16,9 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span>
+          <BootstrapIcon icon="list" />
+        </span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
