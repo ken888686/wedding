@@ -1,18 +1,46 @@
 <script setup>
 import axios from "axios";
-import { onMounted } from "@vue/runtime-core";
+import jsSHA from "jssha";
+import moment from "moment";
+import { onMounted, ref } from "@vue/runtime-core";
 
-// const url =
-//   "https://ptx.transportdata.tw/MOTC/v2/PTX/Web/News?$filter=NewsCategory%20%20eq%201&$orderby=UpdateTime%20desc&$top=30&$format=JSON";
+const url =
+  "https://ptx.transportdata.tw/MOTC/v2/PTX/Web/News?$filter=NewsCategory%20%20eq%201&$orderby=UpdateTime%20desc&$top=5&$format=JSON";
+const AppID = "89addd4fa214427d9c23dc4f66699d02";
+const AppKey = "j8SMq9XgELj2lAfJhSs87abLuKs";
+
+let newsList = ref([]);
+
+const getAuthorizationHeader = function () {
+  let GMTString = new Date().toGMTString();
+  let ShaObj = new jsSHA("SHA-1", "TEXT");
+  ShaObj.setHMACKey(AppKey, "TEXT");
+  ShaObj.update("x-date: " + GMTString);
+  let HMAC = ShaObj.getHMAC("B64");
+  let Authorization =
+    'hmac username="' +
+    AppID +
+    '", algorithm="hmac-sha1", headers="x-date", signature="' +
+    HMAC +
+    '"';
+  return { Authorization: Authorization, "X-Date": GMTString };
+};
 
 function getNews() {
-  axios.get("https://www.google.com").then(function (res) {
-    console.log(res.data);
+  axios.get(url, { headers: getAuthorizationHeader() }).then((res) => {
+    let temp = res.data.Newses.map((item) => {
+      return {
+        category: item.Title.split("】")[0].substring(1),
+        title: item.Title.split("】")[1],
+        publishTime: moment(item.PublishTime).format("YYYY / MM / DD"),
+      };
+    });
+    newsList.value = temp;
   });
 }
 
 onMounted(() => {
-  // getNews();
+  getNews();
 });
 </script>
 <template>
@@ -20,23 +48,12 @@ onMounted(() => {
     <h2 class="h2 fw-bold mb-5 text-center">最新公告</h2>
     <table class="table hover-custom">
       <tbody>
-        <tr class="position-relative align-middle">
-          <td class="text-muted py-4">緊急通知</td>
-          <td class="text-muted">2021 / 11 / 05</td>
+        <tr class="position-relative align-middle" v-for="news in newsList">
+          <td class="text-muted py-4">{{ news.category }}</td>
+          <td class="text-muted">{{ news.publishTime }}</td>
           <td>
             <a href="#" class="stretched-link text-decoration-none">
-              2021/11/17 (三) 09:00 - 11:00 台北市 南港區 YouBike
-              1.0『凌雲市場』停電通知
-            </a>
-          </td>
-          <td><i class="bi bi-chevron-right"></i></td>
-        </tr>
-        <tr class="position-relative align-middle">
-          <td class="text-muted py-4">營運資訊</td>
-          <td class="text-muted">2021 / 11 / 04</td>
-          <td>
-            <a href="#" class="stretched-link text-decoration-none">
-              2021/11/2(二) 10:00 新北市-中和區 新增1站YouBike 2.0 正式營運公告
+              {{ news.title }}
             </a>
           </td>
           <td><i class="bi bi-chevron-right"></i></td>

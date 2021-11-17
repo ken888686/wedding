@@ -15,6 +15,7 @@
 - [Yun](https://2021.thef2e.com/users/6296432819610583289)
 - [Bootstrap 5](https://bootstrap5.hexschool.com/)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [tw-city-selector](https://dennykuo.github.io/tw-city-selector/)
 
 ## Vue 3 + Vite
 
