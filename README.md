@@ -11,11 +11,27 @@
 
 ## 參考資源
 
+### 六角學院
+
 - [figma-自行車道地圖資訊整合網](https://www.figma.com/file/lguo4e9pNw7y7ZZ9zzzA3D)
 - [Yun](https://2021.thef2e.com/users/6296432819610583289)
 - [Bootstrap 5](https://bootstrap5.hexschool.com/)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
+
+### 其他資源
+
+- [Vite](https://github.com/vitejs/vite)
+- [vue-router](https://github.com/vuejs/vue-router)
+- [vue3-openlayers](https://github.com/MelihAltintas/vue3-openlayers)
+- [vue3-bootstrap-icons](https://github.com/dvuckovic/vue3-bootstrap-icons)
 - [tw-city-selector](https://dennykuo.github.io/tw-city-selector/)
+- [axios](https://github.com/axios/axios)
+- [jsSHA](https://github.com/Caligatio/jsSHA)
+- [Moment.js](https://github.com/moment/moment)
+
+## Github CI/CD
+
+- [Deploy to Github Pages](https://github.com/marketplace/actions/deploy-to-github-pages)
 
 ## Vue 3 + Vite
 
