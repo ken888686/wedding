@@ -15,7 +15,7 @@
         "
         href="/bike-map"
       >
-        <img src="img/timeline.svg" alt="timeline" />
+        <img src="/img/timeline.svg" alt="timeline" />
         <span class="fw-bold fs-3 text-white">自行車路線</span>
       </a>
     </div>
@@ -31,7 +31,7 @@
         "
         href="/bike-rent"
       >
-        <img src="img/directions_bike.svg" alt="directions_bike" />
+        <img src="/img/directions_bike.svg" alt="directions_bike" />
         <span class="fw-bold fs-3 text-white">單車租借</span>
       </a>
     </div>

@@ -5,7 +5,7 @@
   <nav class="navbar navbar-expand-lg py-0 sticky-top bg-white shadow-sm">
     <div class="container-fluid">
       <router-link class="navbar-brand p-0" to="/">
-        <img src="img/logo.svg" alt="logo" />
+        <img src="/img/logo.svg" alt="logo" />
       </router-link>
       <button
         class="navbar-toggler"
