@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "post-build": "sh ./deploy.sh",
     "serve": "vite preview"
   },
   "repository": {
@@ -25,7 +24,8 @@
     "jssha": "^3.2.0",
     "moment": "^2.29.1",
     "vue": "^3.2.16",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue3-openlayers": "^0.1.53"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",

@@ -3,6 +3,7 @@ import Home from "/@/views/Home.vue";
 import News from "/@/views/News.vue";
 import Activities from "/@/views/Activities.vue";
 import Detail from "/@/views/Detail.vue";
+import BikeMap from "/@/views/BikeMap.vue";
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     component: Activities,
   },
   {
+    path: "/bike-map",
+    name: "BikeMap",
+    component: BikeMap,
+  },
+  {
     path: "/:catchAll(.*)",
     redirect: "/",
     hidden: true,
@@ -36,4 +42,11 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+// 換頁面畫面置頂
+router.afterEach((to, from, next) => {
+  // console.log(to, from, next);
+  window.scrollTo(0, 0);
+});
+
 export default router;

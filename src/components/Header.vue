@@ -61,9 +61,7 @@
             </ul>
           </li>
           <li class="nav-item mx-2">
-            <router-link class="nav-link link-dark px-0" to="bike-map">
-              自行車路線
-            </router-link>
+            <a class="nav-link link-dark px-0" href="bike-map">自行車路線</a>
           </li>
           <li class="nav-item mx-2 dropdown">
             <router-link
