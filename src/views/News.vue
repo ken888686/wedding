@@ -1,5 +1,5 @@
 <script setup>
-import NewsList from "../components/NewsList.vue";
+import NewsList from "/@/components/NewsList.vue";
 </script>
 
 <template>
@@ -7,13 +7,22 @@ import NewsList from "../components/NewsList.vue";
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <router-link to="/">首頁</router-link>
+          <router-link to="/" class="link-light text-decoration-none">
+            首頁
+          </router-link>
         </li>
         <li class="breadcrumb-item">
-          <router-link to="/news">最新消息</router-link>
+          <router-link to="/news" class="link-light text-decoration-none">
+            最新消息
+          </router-link>
         </li>
         <li class="breadcrumb-item active" aria-current="page">
-          <router-link to="/announcement">最新公告</router-link>
+          <router-link
+            to="/activities"
+            class="link-primary text-decoration-none"
+          >
+            最新公告
+          </router-link>
         </li>
       </ol>
     </nav>
