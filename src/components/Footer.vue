@@ -4,7 +4,7 @@
 <template>
   <footer class="d-flex py-3 px-4">
     <div class="d-flex flex-column me-auto">
-      <img src="../static/img/logo.svg" alt="logo" />
+      <img src="img/logo.svg" alt="logo" />
       <span class="text-dark">©2021 , Taiwan Bike. All Rights Reserved.</span>
     </div>
     <div class="d-flex">

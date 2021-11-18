@@ -1,7 +1,7 @@
 <script setup>
-import Banner from "../components/Banner.vue";
-import Buttons from "../components/Buttons.vue";
-import News from "./News.vue";
+import Banner from "/@/components/Banner.vue";
+import Buttons from "/@/components/Buttons.vue";
+import NewsList from "/@/components/NewsList.vue";
 </script>
 
 <template>

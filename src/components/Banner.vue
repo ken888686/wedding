@@ -1,4 +1,4 @@
-<script></script>
+<script setup></script>
 
 <template>
   <div class="banner bg-cover position-relative mb-5">
@@ -12,7 +12,7 @@
           placeholder="請輸入關鍵字"
         />
         <button type="submit" class="btn px-2">
-          <img src="../static/img/search.svg" alt="search" />
+          <img src="img/search.svg" alt="search" />
         </button>
       </form>
     </div>

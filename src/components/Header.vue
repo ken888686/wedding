@@ -5,7 +5,7 @@
   <nav class="navbar navbar-expand-lg py-0 sticky-top bg-white shadow-sm">
     <div class="container-fluid">
       <router-link class="navbar-brand p-0" to="/">
-        <img src="src/static/img/logo.svg" alt="logo" />
+        <img src="img/logo.svg" alt="logo" />
       </router-link>
       <button
         class="navbar-toggler"
@@ -91,14 +91,16 @@
               aria-labelledby="bikeRentDropdownMenuLink"
             >
               <li>
-                <router-link class="dropdown-item" to="#">
+                <router-link class="dropdown-item" to="bike-rent">
                   單車租借
                 </router-link>
               </li>
             </ul>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link link-dark px-0" href="#">騎乘小叮嚀</a>
+            <router-link class="nav-link link-dark px-0" to="/notify">
+              騎乘小叮嚀
+            </router-link>
           </li>
         </ul>
       </div>

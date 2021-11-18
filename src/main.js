@@ -1,12 +1,12 @@
 import { createApp } from "vue";
 import BootstrapIcon from "@dvuckovic/vue3-bootstrap-icons";
-import App from "./App.vue";
-import router from "./router";
+import App from "/@/App.vue";
+import Router from "/@/router";
 
-import "./assets/all.scss";
+import "/@/styles/all.scss";
 import "bootstrap";
 
 createApp(App)
-  .use(router)
+  .use(Router)
   .component("BootstrapIcon", BootstrapIcon)
   .mount("#app");
