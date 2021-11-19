@@ -13,16 +13,18 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
+
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
+
       - name: Install and Build 🔧
         run: |
           npm ci
           npm run build --if-present
 
-      - name: Copy Files
+      - name: Copy Files 🔥
         run: |
           mkdir dist/assets/img
           cp src/assets/img/banner-01.png dist/assets/img/

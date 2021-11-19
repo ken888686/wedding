@@ -4,6 +4,7 @@ import News from "@/views/News.vue";
 import Activities from "@/views/Activities.vue";
 import Detail from "@/views/Detail.vue";
 import BikeMap from "@/views/BikeMap.vue";
+import BikeRent from "@/views/BikeRent.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/bike-map",
     name: "BikeMap",
     component: BikeMap,
+  },
+  {
+    path: "/bike-rent",
+    name: "BikeRent",
+    component: BikeRent,
   },
   {
     path: "/:catchAll(.*)",
