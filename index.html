@@ -6,11 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自行車道地圖資訊整合網(by Yun)</title>
-    <script type="module" crossorigin src="./assets/index.fff0d84a.js"></script>
-    <link rel="modulepreload" href="./assets/vendor.d364f8f5.js">
+    <script type="module" crossorigin src="./assets/index.c0d50d6b.js"></script>
+    <link rel="modulepreload" href="./assets/vendor.508188f3.js">
     <link rel="stylesheet" href="./assets/index.70df3ca9.css">
   </head>
   <body>
+    <script>
+      (function () {
+        let redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
     <div id="app"></div>
     
   </body>
