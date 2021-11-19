@@ -1,8 +1,8 @@
 <script setup>
-import Banner from "/@/components/Banner.vue";
-import Buttons from "/@/components/Buttons.vue";
-import NewsList from "/@/components/NewsList.vue";
-import Footer from "/@/components/Footer.vue";
+import Banner from "@/components/Banner.vue";
+import Buttons from "@/components/Buttons.vue";
+import NewsList from "@/components/NewsList.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
