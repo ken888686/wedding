@@ -23,6 +23,7 @@
 - [Vite](https://github.com/vitejs/vite)
 - [vue-router](https://github.com/vuejs/vue-router)
 - [vue3-openlayers](https://github.com/MelihAltintas/vue3-openlayers)
+- [vue-leaflet](https://github.com/vue-leaflet/vue-leaflet)
 - [vue3-bootstrap-icons](https://github.com/dvuckovic/vue3-bootstrap-icons)
 - [tw-city-selector](https://dennykuo.github.io/tw-city-selector/)
 - [axios](https://github.com/axios/axios)
