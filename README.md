@@ -23,12 +23,14 @@
 - [Vite](https://github.com/vitejs/vite)
 - [vue-router](https://github.com/vuejs/vue-router)
 - [vue3-openlayers](https://github.com/MelihAltintas/vue3-openlayers)
+- [vue-leaflet](https://github.com/vue-leaflet/vue-leaflet)
 - [vue3-bootstrap-icons](https://github.com/dvuckovic/vue3-bootstrap-icons)
 - [tw-city-selector](https://dennykuo.github.io/tw-city-selector/)
 - [axios](https://github.com/axios/axios)
 - [jsSHA](https://github.com/Caligatio/jsSHA)
 - [Moment.js](https://github.com/moment/moment)
 - [於 Github page 部屬靜態 Vue.js 專案，在 History Mode 下子頁面會重新導向到 404 的解決方案。](https://unzan.medium.com/139f55323164)
+- [TDX in Postman](https://hsiangfeng.github.io/other/20210928/2005731696/)
 
 ## Github CI/CD
 

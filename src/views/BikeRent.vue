@@ -72,14 +72,14 @@ new TwCitySelector({
         style="z-index: 1; width: 376px"
       >
         <div class="col-auto">
-          <h4 class="fw-bold" :style="strokeColor">路線搜尋</h4>
+          <h4 class="fw-bold">站牌搜尋</h4>
         </div>
         <div class="col-auto mt-0">
           <input
             type="text"
             class="form-control"
             id="keywordFormControlInput"
-            placeholder="請輸入路線關鍵字"
+            placeholder="請輸入站牌關鍵字"
             v-model="keyword"
           />
         </div>

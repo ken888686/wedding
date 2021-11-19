@@ -14,7 +14,8 @@ export default {
   },
   watch: {
     $route: function () {
-      this.isShow = this.$route.path !== "/bike-map";
+      this.isShow =
+        this.$route.path !== "/bike-map" && this.$route.path !== "/bike-rent";
     },
   },
 };

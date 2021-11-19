@@ -30,7 +30,7 @@
                 border-bottom border-2 border-primary
                 px-0
               "
-              href="#"
+              href="/news"
               id="newsDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
@@ -66,21 +66,21 @@
             </router-link>
           </li>
           <li class="nav-item mx-2 dropdown">
-            <router-link
+            <a
               class="
                 nav-link
                 link-dark
                 border-bottom border-2 border-primary
                 px-0
               "
-              to="bike-rent"
+              href="/bike-rent"
               id="bikeRentDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               單車租借
-            </router-link>
+            </a>
             <ul
               class="
                 dropdown-menu dropdown-menu-primary
