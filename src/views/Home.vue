@@ -1,8 +1,8 @@
 <script setup>
-import Banner from "/@/components/Banner.vue";
-import Buttons from "/@/components/Buttons.vue";
-import NewsList from "/@/components/NewsList.vue";
-import Footer from "/@/components/Footer.vue";
+import Banner from "@/components/Banner.vue";
+import Buttons from "@/components/Buttons.vue";
+import NewsList from "@/components/NewsList.vue";
+import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import Footer from "/@/components/Footer.vue";
     <h2 class="h2 fw-bold text-center">最新公告</h2>
     <NewsList />
     <div class="text-center py-3">
-      <a href="#" class="btn btn-primary">更多最新公告</a>
+      <a href="/news" class="btn btn-primary">更多最新公告</a>
     </div>
     <!-- <NewsList />
     <Activities /> -->

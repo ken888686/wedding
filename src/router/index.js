@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "/@/views/Home.vue";
-import News from "/@/views/News.vue";
-import Activities from "/@/views/Activities.vue";
-import Detail from "/@/views/Detail.vue";
-import BikeMap from "/@/views/BikeMap.vue";
+import Home from "@/views/Home.vue";
+import News from "@/views/News.vue";
+import Activities from "@/views/Activities.vue";
+import Detail from "@/views/Detail.vue";
+import BikeMap from "@/views/BikeMap.vue";
 
 const routes = [
   {
