@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && mkdir dist/img && cp src/assets/img/banner-01.png dist/img/ && cp README.md dist/",
+    "build": "vite build && mkdir dist/assets/img && cp src/assets/img/banner-01.png dist/assets/img/ && cp README.md dist/",
     "serve": "vite preview"
   },
   "repository": {
