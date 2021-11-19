@@ -6,20 +6,20 @@ import { onMounted, ref } from "@vue/runtime-core";
 
 const url =
   "https://ptx.transportdata.tw/MOTC/v2/PTX/Web/News?$filter=NewsCategory%20%20eq%201&$orderby=UpdateTime%20desc&$top=5&$format=JSON";
-const AppID = "89addd4fa214427d9c23dc4f66699d02";
-const AppKey = "j8SMq9XgELj2lAfJhSs87abLuKs";
+const appId = "89addd4fa214427d9c23dc4f66699d02";
+const appKey = "j8SMq9XgELj2lAfJhSs87abLuKs";
 
 let newsList = ref([]);
 
 const getAuthorizationHeader = function () {
   let GMTString = new Date().toGMTString();
   let ShaObj = new jsSHA("SHA-1", "TEXT");
-  ShaObj.setHMACKey(AppKey, "TEXT");
+  ShaObj.setHMACKey(appKey, "TEXT");
   ShaObj.update("x-date: " + GMTString);
   let HMAC = ShaObj.getHMAC("B64");
   let Authorization =
     'hmac username="' +
-    AppID +
+    appId +
     '", algorithm="hmac-sha1", headers="x-date", signature="' +
     HMAC +
     '"';

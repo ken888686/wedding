@@ -30,7 +30,7 @@
                 border-bottom border-2 border-primary
                 px-0
               "
-              href="#"
+              href="/news"
               id="newsDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"
@@ -73,7 +73,7 @@
                 border-bottom border-2 border-primary
                 px-0
               "
-              to="bike-rent"
+              to="/bike-rent"
               id="bikeRentDropdownMenuLink"
               role="button"
               data-bs-toggle="dropdown"

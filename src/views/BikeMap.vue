@@ -1,20 +1,48 @@
 <script setup>
 import Header from "@/components/Header.vue";
-import { ref } from "vue";
+import { computed, ref } from "vue";
+import TwCitySelector from "tw-city-selector";
+import locationData from "@/assets/position-coordinate.json";
 
-const center = ref([
-  Math.abs(121.509912913931 + 121.511369350755) / 2,
-  Math.abs(25.028756758486 + 25.0280592442443) / 2,
-]);
+// const center = ref([
+//   average(121.509912913931 + 121.511369350755) ,
+//   average(25.028756758486 + 25.0280592442443) ,
+// ]);
+let center = ref([120.9738819, 23.97565]);
 const projection = ref("EPSG:4326");
-const zoom = ref(15);
+let zoom = ref(8);
 const rotation = ref(0);
 const strokeWidth = ref(7);
 const strokeColor = ref("#0d706d");
 
-function search() {
-  console.log("Hi");
+let county = ref("");
+let district = ref("");
+
+function search() {}
+
+// 平均值
+function average(num1, num2) {
+  return Math.abs(num1 + num2) / 2;
 }
+
+// 移動中心點
+function move() {
+  let currentLocation = locationData.filter(
+    (item) => item.districtName === `${county.value}${district.value}`
+  )[0];
+  center.value = [currentLocation.lng, currentLocation.lat];
+  zoom.value = 14;
+}
+
+new TwCitySelector({
+  el: ".city-selector",
+  standardWords: true,
+  elCounty: ".county",
+  countyValue: "臺北市",
+  elDistrict: ".district",
+  districtValue: "中正區",
+  districtClassName: "test",
+});
 </script>
 
 <template >
@@ -52,26 +80,27 @@ function search() {
           />
         </div>
         <div class="col-auto">
-          <div class="row">
+          <div class="row city-selector">
             <div class="col-5">
               <span>縣市</span>
-              <select class="form-select" aria-label="縣市">
-                <option value="1" selected>台北市</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <select
+                class="county form-select"
+                aria-label="縣市"
+                v-model="county"
+              ></select>
             </div>
             <div class="col-5">
               <span>鄉鎮區</span>
-              <select class="form-select" aria-label="鄉鎮區">
-                <option value="1" selected>大安區</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <select
+                class="district form-select"
+                aria-label="鄉鎮區"
+                v-model="district"
+                @change="move"
+              ></select>
             </div>
           </div>
         </div>
-        <div class="col-auto d-grid">
+        <div class="col-auto d-grid pb-3">
           <button type="button" class="btn btn-primary" @click="search">
             搜尋
           </button>
