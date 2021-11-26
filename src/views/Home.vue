@@ -1,22 +1,18 @@
-<script setup>
-import Banner from "@/components/Banner.vue";
-import Buttons from "@/components/Buttons.vue";
-import NewsList from "@/components/NewsList.vue";
-import Footer from "@/components/Footer.vue";
-</script>
-
 <template>
-  <Banner />
-  <div class="container">
-    <Buttons />
-
-    <h2 class="h2 fw-bold text-center">最新公告</h2>
-    <NewsList />
-    <div class="text-center py-3">
-      <a href="/news" class="btn btn-primary">更多最新公告</a>
-    </div>
-    <!-- <NewsList />
-    <Activities /> -->
+  <div class="home">
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
-<style></style>
+
+<script>
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue';
+
+export default {
+  name: 'Home',
+  components: {
+    HelloWorld,
+  },
+};
+</script>
