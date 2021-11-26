@@ -10,6 +10,7 @@
       <span class="lead my-3">{{ date }}</span>
     </div>
   </div>
+  <Navbar />
 </template>
 <script>
 import Navbar from './Navbar.vue';
