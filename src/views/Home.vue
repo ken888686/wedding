@@ -1,9 +1,12 @@
 <template>
-  <div class="container">{{ title }}</div>
+  <Banner />
 </template>
 
 <script>
+import Banner from '@/components/Banner.vue';
+
 export default {
+  components: { Banner },
   data() {
     return { title: 'Home' };
   },
