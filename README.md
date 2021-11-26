@@ -23,3 +23,7 @@
 ## Github CI/CD
 
 - [Deploy to Github Pages](https://github.com/marketplace/actions/deploy-to-github-pages)
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
