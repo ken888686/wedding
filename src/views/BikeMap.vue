@@ -21,20 +21,17 @@ let county = ref("");
 let district = ref("");
 let keyword = ref("");
 
-function search() {}
-
-// 平均值
-function average(num1, num2) {
-  return Math.abs(num1 + num2) / 2;
-}
-
-// 移動中心點
-function move() {
+function search() {
   let currentLocation = locationData.filter(
     (item) => item.districtName === `${county.value}${district.value}`
   )[0];
   center.value = [currentLocation.lng, currentLocation.lat];
-  zoom.value = 14;
+  zoom.value = 15;
+}
+
+// 平均值
+function average(num1, num2) {
+  return Math.abs(num1 + num2) / 2;
 }
 
 new TwCitySelector({
