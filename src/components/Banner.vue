@@ -10,20 +10,14 @@
       <span class="lead my-3">{{ date }}</span>
     </div>
   </div>
-  <Navbar />
 </template>
 <script>
-import Navbar from './Navbar.vue';
-
 export default {
   data() {
     return {
       title: 'Aaron & Annabelle',
       date: 'SEPTEMBER 3, 2021',
     };
-  },
-  components: {
-    Navbar,
   },
 };
 </script>
@@ -33,7 +27,6 @@ export default {
 h1 {
   font-family: Rochester;
   padding: 0 4% 10px 4%;
-  color: #6c7882;
   font-size: 62px;
   font-weight: normal;
   margin: 16px 0;
@@ -44,7 +37,6 @@ span {
   line-height: 1;
   font-family: 'Noto Sans';
   letter-spacing: 3px;
-  color: #6c7882;
   font-size: 20px;
   font-weight: normal;
   text-transform: uppercase;
