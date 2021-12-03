@@ -1,36 +1,26 @@
 <template>
-  <img
-    src="https://media-api.xogrp.com/images/68024316-8d34-48e6-919b-fffdb3b2366b~rt_auto-rs_1440.h?ordering=explicit"
-    alt=""
-    class="bg-cover w-100 position-absolute"
-  />
-  <div class="p-4 p-md-5 mb-4">
-    <div class="px-0 text-center">
-      <h1>{{ title }}</h1>
-      <span class="lead my-3">{{ date }}</span>
-    </div>
+  <div class="container-fluid d-flex flex-column justify-content-center px-0 position-relative">
+    <img
+      src="https://media-api.xogrp.com/images/68024316-8d34-48e6-919b-fffdb3b2366b~rt_auto-rs_1440.h?ordering=explicit"
+      alt=""
+      class="w-100 position-absolute"
+    />
+    <h1 class="m-0">{{ title }}</h1>
+    <span class="lead my-3">{{ date }}</span>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      title: 'Aaron & Annabelle',
-      date: 'SEPTEMBER 3, 2021',
-    };
-  },
-};
+<script setup>
+const title = 'Aaron & Annabelle';
+const date = 'SEPTEMBER 3, 2021';
 </script>
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Rochester&display=swap');
 
 h1 {
   font-family: Rochester;
-  padding: 0 4% 10px 4%;
   font-size: 62px;
   font-weight: normal;
-  margin: 16px 0;
-  padding-bottom: 20px;
+  text-align: center;
 }
 
 span {
@@ -40,7 +30,7 @@ span {
   font-size: 20px;
   font-weight: normal;
   text-transform: uppercase;
-  margin: 8px 0;
+  text-align: center;
 }
 
 $img-url: 'https://media-api.xogrp.com/images/68024316-8d34-48e6-919b-fffdb3b2366b~rt_auto-rs_1440.h?ordering=explicit';
@@ -49,7 +39,7 @@ $img-url: 'https://media-api.xogrp.com/images/68024316-8d34-48e6-919b-fffdb3b236
   background-size: auto;
   background-position: top center;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: -10;
 }
 
 .space {

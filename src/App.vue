@@ -1,18 +1,11 @@
 <template>
   <Banner />
-  <Navbar />
+  <!-- <Navbar message='Hi'/> -->
   <router-view />
 </template>
 
-<script>
+<script setup>
 import Banner from '@/components/Banner.vue';
-import Navbar from '@/components/Navbar.vue';
-
-export default {
-  components: { Banner, Navbar },
-  data() {
-    return { title: 'Home' };
-  },
-};
+// import Navbar from '@/components/Navbar.vue';
 </script>
 <style lang="scss"></style>

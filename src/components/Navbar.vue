@@ -10,19 +10,20 @@
     </router-link>
   </div>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      menuList: [
-        { url: '/', name: 'Home' },
-        { url: '/our-story', name: 'Our Story' },
-        { url: '/photos', name: 'Photos' },
-        { url: '/honeymoon', name: 'Honeymoon' },
-      ],
-    };
-  },
-  mounted() {},
-};
+<script setup>
+import { onMounted, defineProps } from 'vue';
+
+const menuList = [
+  { url: '/', name: 'Home' },
+  { url: '/our-story', name: 'Our Story' },
+  { url: '/photos', name: 'Photos' },
+  { url: '/honeymoon', name: 'Honeymoon' },
+];
+const title = 'titles';
+
+const props = defineProps(['message']);
+console.log(props.message);
+
+onMounted(() => {});
 </script>
 <style lang="scss" scoped></style>
